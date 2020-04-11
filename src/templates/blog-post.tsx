@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import IconList from "../components/icon-list"
 
 interface Props {
   data: {
@@ -18,10 +19,16 @@ interface Props {
   pageContext: any
 }
 
+interface ProjectIcon {
+  name: string
+  version: string
+}
+
 const BlogPostTemplate = ({ data, pageContext }: Props) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  const projectIcons = post.frontmatter.projectIcons as ProjectIcon[]
 
   return (
     <Layout location={window.location} title={siteTitle}>
@@ -48,6 +55,9 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
           >
             {post.frontmatter.date}
           </p>
+          {projectIcons != null && projectIcons.length > 0 && (
+            <IconList icons={projectIcons} />
+          )}
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -107,6 +117,11 @@ export const pageQuery = graphql`
         title
         date(formatString: "dddd, DD MMMM, YYYY")
         description
+        type
+        projectIcons {
+          name
+          version
+        }
       }
     }
   }
