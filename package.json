@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "andrewrobilliard.com",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Andrew Robilliard's personal blog. Created using Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Andrew Robilliard <andrew_robilliard@outlook.com>",
   "dependencies": {
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.3.1",
