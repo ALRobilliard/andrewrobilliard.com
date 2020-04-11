@@ -1,0 +1,10 @@
+a {
+  color: #f57c00;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ffa726;
+  -webkit-transition: color 0.2s; /* safari */
+  transition: color 0.2s;
+}
