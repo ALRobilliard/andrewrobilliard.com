@@ -56,7 +56,14 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
             {post.frontmatter.date}
           </p>
           {projectIcons != null && projectIcons.length > 0 && (
-            <IconList icons={projectIcons} />
+            <div>
+              <IconList icons={projectIcons} />
+              <hr
+                style={{
+                  marginBottom: rhythm(1),
+                }}
+              />
+            </div>
           )}
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -81,14 +88,14 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
           }}
         >
           <li>
-            {previous && (
+            {previous && previous.frontmatter.type == post.frontmatter.type && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
-            {next && (
+            {next && next.frontmatter.type == post.frontmatter.type && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>

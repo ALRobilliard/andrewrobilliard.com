@@ -2,6 +2,7 @@
 title: About Me
 date: "2017-06-06"
 description: "My first post"
+type: "blog"
 ---
 
 Hi, I'm Andrew Robilliard. Originally from Canada, I've now been in New Zealand for a lot longer than seems possible. Currently, I'm in my final year of a Bachelor of Science at the [University of Auckland](https://www.auckland.ac.nz), majoring in Computer Science and Information Systems.
