@@ -1,11 +1,34 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import "./navigation.css"
 
 const Navigation = () => {
+  const [isScrolled, setScrolled] = useState<boolean>()
+  const topOfPage = !window.pageYOffset
+  const classes = !isScrolled
+    ? "navbar-fixed"
+    : "navbar-fixed navbar-scroll bottom-shadow"
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 1) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      // unregister event
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
     <div>
-      <div className="navbar-fixed bottom-shadow">
+      <div className={classes}>
         <nav className="nav-wrapper">
           <div className="container">
             <Link className="brand-logo" to={`/`}>{`Andrew Robilliard`}</Link>
@@ -29,7 +52,7 @@ const Navigation = () => {
           </div>
         </nav>
       </div>
-      <div style={{ width: "100%", height: "64px" }}></div>
+      <div style={{ width: "100%", height: "122px" }}></div>
     </div>
   )
 }
