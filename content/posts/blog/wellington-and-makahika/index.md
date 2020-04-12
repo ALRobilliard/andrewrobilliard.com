@@ -2,6 +2,7 @@
 title: Week 1 - Wellington and Makahika
 date: "2018-01-28"
 type: "blog"
+template: "blogpost"
 ---
 
 Seeing as I’m one week into my first proper job of my career, with my first day at the office coming up in less than two days, I thought it was a perfect time to start getting some writing on my website. I’m hoping to get out weekly or fortnightly updates as I begin my employment with [Intergen](https://www.intergen.co.nz) at their Auckland office to try and document my learning and maybe even help or reassure others moving into a developer career. So, without further ado, here’s how my first week went for the New Zealand leaders in the design and application of Microsoft technology.

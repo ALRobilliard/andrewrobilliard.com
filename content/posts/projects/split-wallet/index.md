@@ -16,6 +16,7 @@ projectIcons:
     version: original
   - name: heroku
     version: original-wordmark
+template: "project"
 ---
 
 Manage your money, easily share expenses with others, take control.

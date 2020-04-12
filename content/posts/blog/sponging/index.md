@@ -2,6 +2,7 @@
 title: Sponging
 date: "2018-11-17"
 type: "blog"
+template: "blogpost"
 ---
 
 Well, if you've just opened this article thinking you somehow missed 40 blog posts - fear not - you haven't! As it turns out, the first year of a new career turned into something that was just so exciting that I ended up taking a massive gap in post writing. Hopefully, after the long break, I can come back with a few more things to write about this time.
