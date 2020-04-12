@@ -5,10 +5,10 @@ import "./navigation.css"
 const Navigation = () => {
   return (
     <div>
-      <div className="navbar-fixed">
+      <div className="navbar-fixed bottom-shadow">
         <nav className="nav-wrapper">
           <div className="container">
-            <Link className="brand-logo" to={`/`}>{`{ AndrewR }`}</Link>
+            <Link className="brand-logo" to={`/`}>{`Andrew Robilliard`}</Link>
             <ul className="nav-links">
               <li>
                 <Link className="nav-link" to={`/about-me`}>
