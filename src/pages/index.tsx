@@ -84,7 +84,7 @@ export const pageQuery = graphql`
             type
             projectIcons {
               name
-              version
+              cssClass
             }
           }
         }

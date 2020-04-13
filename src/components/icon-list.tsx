@@ -4,22 +4,15 @@ import Devicon from "./devicon"
 interface Props {
   icons: {
     name: string
-    version: string
+    cssClass: string
   }[]
 }
 
 const IconList = ({ icons }: Props) => {
-  const iconListStyle = {}
-
   return (
-    <div style={iconListStyle}>
+    <div style={{ marginBottom: "1rem" }}>
       {icons.map(icon => (
-        <Devicon
-          key={icon.name}
-          name={icon.name}
-          version={icon.version}
-          size={"5rem"}
-        />
+        <Devicon key={icon.name} cssClass={icon.cssClass} size={"3.5rem"} />
       ))}
     </div>
   )

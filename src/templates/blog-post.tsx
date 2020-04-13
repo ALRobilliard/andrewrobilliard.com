@@ -21,7 +21,7 @@ interface Props {
 
 interface ProjectIcon {
   name: string
-  version: string
+  cssClass: string
 }
 
 const BlogPostTemplate = ({ data, pageContext }: Props) => {
@@ -127,7 +127,7 @@ export const pageQuery = graphql`
         type
         projectIcons {
           name
-          version
+          cssClass
         }
       }
     }

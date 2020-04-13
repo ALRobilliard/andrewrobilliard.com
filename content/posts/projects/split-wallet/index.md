@@ -4,18 +4,18 @@ date: "2019-04-03"
 type: project
 projectIcons:
   - name: docker
-    version: original-wordmark
+    cssClass: devicon-docker-plain-wordmark colored
   - name: csharp
-    version: plain
+    cssClass: devicon-csharp-plain colored
   - name: dot-net
-    version: original-wordmark
+    cssClass: devicon-dot-net-plain-wordmark colored
   - name: postgresql
-    version: plain
+    cssClass: devicon-postgresql-plain colored
     colored: true
   - name: react
-    version: original
+    cssClass: devicon-react-original colored
   - name: heroku
-    version: original-wordmark
+    cssClass: devicon-heroku-original-wordmark colored
 template: "project"
 ---
 
