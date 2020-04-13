@@ -3,6 +3,7 @@ import Navigation from "./navigation/navigation"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
+import Footer from "../components/footer"
 
 interface Props {
   location: Location
@@ -66,11 +67,7 @@ const Layout = ({ location, title, children }: Props) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer message={`© ${new Date().getFullYear()}, Andrew Robilliard`} />
       </div>
     </div>
   )
