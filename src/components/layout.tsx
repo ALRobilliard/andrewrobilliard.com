@@ -3,7 +3,7 @@ import Navigation from "./navigation/navigation"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
-import Footer from "../components/footer"
+import Footer from "./footer/footer"
 
 interface Props {
   location: Location

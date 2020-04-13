@@ -1,0 +1,50 @@
+.custom-footer {
+  line-height: 122px;
+  height: 122px;
+}
+
+.custom-footer .message {
+  float: left;
+}
+
+.custom-footer .icon-group {
+  float: right;
+  height: 100%;
+  position: relative;
+}
+
+.custom-footer .icon-group a {
+  display: inline-block;
+  margin-left: 1rem;
+  width: 2rem;
+}
+
+.custom-footer .icon-group a:first-of-type {
+  margin-left: -1rem;
+}
+
+.custom-footer .icon-group a img {
+  width: 2rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@media screen and (max-width: 460px) {
+  .custom-footer {
+    line-height: 61px;
+  }
+  .custom-footer .message {
+    width: 100%;
+    margin: 0 auto;
+    height: 50%;
+    text-align: center;
+  }
+
+  .custom-footer .icon-group {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+  }
+}
