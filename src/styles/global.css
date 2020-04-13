@@ -1,6 +1,7 @@
 a {
   color: #ff4f00;
   font-weight: bold;
+  box-shadow: none;
 }
 
 a:hover {
