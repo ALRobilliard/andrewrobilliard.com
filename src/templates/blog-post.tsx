@@ -33,7 +33,7 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
   const sourceLink = post.frontmatter.link as string
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
