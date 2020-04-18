@@ -1,5 +1,5 @@
 ---
-title: About Me
+title: 👨‍💻 About Me
 date: "2017-06-06"
 description: "My first post"
 type: "blog"

@@ -1,5 +1,5 @@
 ---
-title: Split Wallet
+title: 💵 Split Wallet
 date: "2019-04-03"
 type: project
 projectIcons:
