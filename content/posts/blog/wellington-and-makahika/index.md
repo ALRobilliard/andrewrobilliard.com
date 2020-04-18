@@ -1,5 +1,6 @@
 ---
-title: 👔 Week 1 - Wellington and Makahika
+title: Week 1 - Wellington and Makahika
+icon: 👔
 date: "2018-01-28"
 type: "blog"
 template: "blogpost"

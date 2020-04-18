@@ -27,6 +27,7 @@ const BlogIndex = ({ data }: Props) => {
       <Bio />
       {posts.map(({ node }: any) => {
         const title = node.frontmatter.title || node.fields.slug
+        const icon = node.frontmatter.icon
         return (
           <article key={node.fields.slug}>
             <header>
@@ -39,6 +40,7 @@ const BlogIndex = ({ data }: Props) => {
                   style={{ boxShadow: `none`, color: `#253031` }}
                   to={node.fields.slug}
                 >
+                  {icon ? icon + ` ` : ``}
                   {title}
                 </Link>
               </h3>
@@ -82,6 +84,8 @@ export const pageQuery = graphql`
             title
             description
             type
+            link
+            icon
             projectIcons {
               name
               cssClass

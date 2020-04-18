@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import IconList from "../components/icon-list"
+import GitHubButton from "react-github-btn"
 
 interface Props {
   data: {
@@ -29,6 +30,7 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
   const projectIcons = post.frontmatter.projectIcons as ProjectIcon[]
+  const sourceLink = post.frontmatter.link as string
 
   return (
     <Layout location={window.location} title={siteTitle}>
@@ -66,6 +68,21 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
             </div>
           )}
         </header>
+        {sourceLink != null && (
+          <div
+            style={{
+              marginBottom: "0.5rem",
+            }}
+          >
+            <GitHubButton
+              href={sourceLink}
+              data-size="large"
+              data-show-count="true"
+            >
+              Source
+            </GitHubButton>
+          </div>
+        )}
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -125,6 +142,7 @@ export const pageQuery = graphql`
         date(formatString: "dddd, DD MMMM, YYYY")
         description
         type
+        link
         projectIcons {
           name
           cssClass

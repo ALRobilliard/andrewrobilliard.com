@@ -1,5 +1,6 @@
 ---
-title: 🧽 Sponging
+title: Sponging
+icon: 🧽
 date: "2018-11-17"
 type: "blog"
 template: "blogpost"

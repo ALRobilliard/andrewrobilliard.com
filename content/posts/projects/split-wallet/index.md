@@ -1,5 +1,6 @@
 ---
-title: 💵 Split Wallet
+title: Split Wallet
+icon: 💵
 date: "2019-04-03"
 type: project
 projectIcons:
@@ -17,6 +18,7 @@ projectIcons:
   - name: heroku
     cssClass: devicon-heroku-original-wordmark colored
 template: "project"
+link: "https://github.com/ALRobilliard/Split"
 ---
 
 Manage your money, easily share expenses with others, take control.
