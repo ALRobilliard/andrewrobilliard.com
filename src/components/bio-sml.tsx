@@ -13,7 +13,7 @@ import { rhythm } from "../utils/typography"
 
 const BioSml = () => {
   const data = useStaticQuery(graphql`
-    query BioQuery {
+    query BioSmlQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
           fixed(width: 50, height: 50) {
