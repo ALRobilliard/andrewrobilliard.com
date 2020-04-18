@@ -22,7 +22,7 @@ const PageTemplate = ({ data, pageContext }: Props) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout location={window.location} title={siteTitle}>
+    <Layout location={location} title={siteTitle}>
       <SEO
         title={page.frontmatter.title}
         description={page.frontmatter.description || page.excerpt}
