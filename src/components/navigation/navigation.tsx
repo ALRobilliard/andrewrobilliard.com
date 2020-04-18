@@ -5,7 +5,6 @@ import useWindowDimensions from "../window-dimensions"
 
 const Navigation = () => {
   const [isScrolled, setScrolled] = useState<boolean>()
-  const topOfPage = !window.pageYOffset
   const classes = !isScrolled
     ? "navbar-fixed"
     : "navbar-fixed navbar-scroll bottom-shadow"
@@ -13,18 +12,24 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 1) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
+      if (typeof window !== `undefined`) {
+        if (window.pageYOffset > 1) {
+          setScrolled(true)
+        } else {
+          setScrolled(false)
+        }
       }
     }
 
-    window.addEventListener("scroll", handleScroll)
+    if (typeof window !== `undefined`) {
+      window.addEventListener("scroll", handleScroll)
+    }
 
     return () => {
       // unregister event
-      window.removeEventListener("scroll", handleScroll)
+      if (typeof window !== `undefined`) {
+        window.removeEventListener("scroll", handleScroll)
+      }
     }
   }, [])
 
