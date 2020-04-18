@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import BioSml from "../components/bio-sml"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -73,7 +73,7 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
           }}
         />
         <footer>
-          <Bio />
+          <BioSml />
         </footer>
       </article>
 

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Bio from "../components/bio"
+import BioSml from "../components/bio-sml"
 
 interface Props {
   data: {
@@ -42,7 +42,7 @@ const PageTemplate = ({ data, pageContext }: Props) => {
           }}
         />
         <footer>
-          <Bio />
+          <BioSml />
         </footer>
       </article>
     </Layout>
