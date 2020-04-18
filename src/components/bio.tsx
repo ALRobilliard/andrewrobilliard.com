@@ -1,22 +1,16 @@
-/**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import GitHubButton from "react-github-btn"
+import Profile from "./profile"
 
 import { rhythm } from "../utils/typography"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/andrew-2019.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 200, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -39,30 +33,43 @@ const Bio = () => {
   return (
     <div
       style={{
-        display: `flex`,
+        display: "flex",
         marginBottom: rhythm(2.5),
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author.name}
+      <div
+        id="bio-text"
         style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
+          width: "60%",
         }}
-        imgStyle={{
-          borderRadius: `50%`,
+      >
+        <h1>Hey, I'm Andrew 👋</h1>
+        <p>
+          I'm a full-stack developer making things in C#, JavaScript, and a few
+          other things.
+          {` `}
+          <a href={`https://twitter.com/${social.twitter}`} target="_blank">
+            You should follow me on Twitter
+          </a>
+        </p>
+        <div>
+          <GitHubButton
+            href="https://github.com/alrobilliard"
+            data-size="large"
+            data-show-count="true"
+          >
+            alrobilliard
+          </GitHubButton>
+        </div>
+      </div>
+      <div
+        id="profile"
+        style={{
+          width: "40%",
         }}
-      />
-      <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
-      </p>
+      >
+        <Profile />
+      </div>
     </div>
   )
 }

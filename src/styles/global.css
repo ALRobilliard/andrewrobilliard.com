@@ -1,0 +1,32 @@
+@import "https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css";
+
+a {
+  color: #ff4f00;
+  font-weight: bold;
+  box-shadow: none;
+}
+
+a:hover {
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s; /* safari */
+  transition: opacity 0.2s;
+}
+
+article ul {
+  margin-left: 25px;
+}
+
+article h2 {
+  padding-bottom: 0.75rem;
+  box-shadow: inset 0 -0.175em white, inset 0 -0.2em rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 530px) {
+  #bio-picture {
+    display: none;
+  }
+
+  #bio-text {
+    width: 100% !important;
+  }
+}

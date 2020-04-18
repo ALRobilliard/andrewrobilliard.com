@@ -22,11 +22,12 @@ const BlogIndex = ({ data }: Props) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={window.location} title={siteTitle}>
-      <SEO title="All posts" />
+    <Layout>
+      <SEO title="Home" />
       <Bio />
       {posts.map(({ node }: any) => {
         const title = node.frontmatter.title || node.fields.slug
+        const icon = node.frontmatter.icon
         return (
           <article key={node.fields.slug}>
             <header>
@@ -35,7 +36,11 @@ const BlogIndex = ({ data }: Props) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <Link
+                  style={{ boxShadow: `none`, color: `#253031` }}
+                  to={node.fields.slug}
+                >
+                  {icon ? icon + ` ` : ``}
                   {title}
                 </Link>
               </h3>
@@ -64,7 +69,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { template: { ne: "page" } } }
+    ) {
       edges {
         node {
           excerpt
@@ -75,6 +83,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            type
+            link
+            icon
+            projectIcons {
+              name
+              cssClass
+            }
           }
         }
       }

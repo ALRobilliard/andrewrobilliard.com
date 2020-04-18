@@ -1,10 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import BioSml from "../components/bio-sml"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import IconList from "../components/icon-list"
+import GitHubButton from "react-github-btn"
 
 interface Props {
   data: {
@@ -18,13 +20,20 @@ interface Props {
   pageContext: any
 }
 
+interface ProjectIcon {
+  name: string
+  cssClass: string
+}
+
 const BlogPostTemplate = ({ data, pageContext }: Props) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  const projectIcons = post.frontmatter.projectIcons as ProjectIcon[]
+  const sourceLink = post.frontmatter.link as string
 
   return (
-    <Layout location={window.location} title={siteTitle}>
+    <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -48,7 +57,32 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
           >
             {post.frontmatter.date}
           </p>
+          {projectIcons != null && projectIcons.length > 0 && (
+            <div>
+              <IconList icons={projectIcons} />
+              <hr
+                style={{
+                  marginBottom: rhythm(1),
+                }}
+              />
+            </div>
+          )}
         </header>
+        {sourceLink != null && (
+          <div
+            style={{
+              marginBottom: "0.5rem",
+            }}
+          >
+            <GitHubButton
+              href={sourceLink}
+              data-size="large"
+              data-show-count="true"
+            >
+              Source
+            </GitHubButton>
+          </div>
+        )}
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -56,7 +90,7 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
           }}
         />
         <footer>
-          <Bio />
+          <BioSml />
         </footer>
       </article>
 
@@ -71,14 +105,14 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
           }}
         >
           <li>
-            {previous && (
+            {previous && previous.frontmatter.type == post.frontmatter.type && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
-            {next && (
+            {next && next.frontmatter.type == post.frontmatter.type && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
@@ -105,8 +139,14 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "dddd, DD MMMM, YYYY")
         description
+        type
+        link
+        projectIcons {
+          name
+          cssClass
+        }
       }
     }
   }
