@@ -3,7 +3,7 @@ module.exports = {
     title: `Andrew Robilliard`,
     author: {
       name: `Andrew Robilliard`,
-      summary: `who lives and works in Auckland, New Zealand building useful things.`,
+      summary: `who lives and works in Auckland, New Zealand.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
