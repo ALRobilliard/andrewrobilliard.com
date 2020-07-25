@@ -5,8 +5,8 @@ module.exports = {
       name: `Andrew Robilliard`,
       summary: `who lives and works in Auckland, New Zealand.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `Andrew Robilliard is a software developer living in Auckland, New Zealand.`,
+    siteUrl: `https://andrewrobilliard.com/`,
     social: {
       dev: `alrobilliard`,
       github: `alrobilliard`,
