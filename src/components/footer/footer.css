@@ -3,6 +3,21 @@
   height: 122px;
 }
 
+.divider {
+  height: 2px;
+  width: 100%;
+  background-color: #2978a0;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.divider span {
+  position: absolute;
+  left: 50%;
+  top: -14px;
+  color: #2978a0;
+}
+
 .custom-footer .message {
   float: left;
 }

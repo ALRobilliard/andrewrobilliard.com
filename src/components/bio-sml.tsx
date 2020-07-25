@@ -60,7 +60,7 @@ const BioSml = () => {
         Written by <strong>{author.name}</strong> {author.summary}
         {` `}
         <a href={`https://twitter.com/${social.twitter}`} target="_blank">
-          You should follow him on Twitter
+          You should follow me on Twitter.
         </a>
       </p>
     </div>
