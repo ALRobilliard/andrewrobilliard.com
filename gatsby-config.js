@@ -88,13 +88,15 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Lobster`,
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `Lobster`,
+            },
+          ]
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
