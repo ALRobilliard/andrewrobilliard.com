@@ -3,9 +3,9 @@ module.exports = {
     title: `Andrew Robilliard`,
     author: {
       name: `Andrew Robilliard`,
-      summary: `who lives and works in Auckland, New Zealand.`,
+      summary: `who lives and works in Wellington, New Zealand.`,
     },
-    description: `Andrew Robilliard is a software developer living in Auckland, New Zealand.`,
+    description: `Andrew Robilliard is a software developer living in Wellington, New Zealand.`,
     siteUrl: `https://andrewrobilliard.com/`,
     social: {
       dev: `alrobilliard`,
