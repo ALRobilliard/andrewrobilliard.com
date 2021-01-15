@@ -28,6 +28,7 @@ const BlogIndex = ({ data }: Props) => {
       {posts.map(({ node }: any) => {
         const title = node.frontmatter.title || node.fields.slug
         const icon = node.frontmatter.icon
+        const articleType = node.frontmatter.type
         return (
           <article key={node.fields.slug}>
             <header>
@@ -44,7 +45,15 @@ const BlogIndex = ({ data }: Props) => {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>
+                {node.frontmatter.date}
+                <span
+                  style={{
+                    color: '#ff4f00'
+                  }}>
+                  {''} // {articleType}
+                </span>
+              </small>
             </header>
             <section>
               <p
