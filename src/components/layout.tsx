@@ -2,7 +2,7 @@ import React from "react"
 import Navigation from "./navigation/navigation"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import Footer from "./footer/footer"
 
 interface Props {
@@ -22,8 +22,8 @@ const Layout = ({ children }: Props) => {
         }}
       >
         <main>{children}</main>
-        <Footer message={`© ${new Date().getFullYear()}, Andrew Robilliard`} />
       </div>
+      <Footer message={`© ${new Date().getFullYear()}, Andrew Robilliard`} />
     </div>
   )
 }
