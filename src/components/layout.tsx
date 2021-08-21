@@ -23,7 +23,7 @@ const Layout = ({ children }: Props) => {
       >
         <main>{children}</main>
       </div>
-      <Footer message={`© ${new Date().getFullYear()}, Andrew Robilliard`} />
+      <Footer message={`A personal blog by Andrew Robilliard where he collects his thoughts and learnings on Microsoft Dynamics 365, PowerApps, Common Data Service, Azure, ASP.NET Core or what ever else he's into.`} />
     </div>
   )
 }

@@ -4,6 +4,45 @@
 
 .custom-footer .container {
   position: relative;
+  color: #eeeeee;
+  display: flex;
+  align-items: center;
+}
+
+.custom-footer .links {
+  position: relative;
+  width: 50%;
+  display: inline-block;
+}
+
+.custom-footer .message {
+  position: relative;
+  width: 50%;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+.custom-footer .message p {
+  margin-bottom: 0;
+}
+
+.custom-footer a {
+  color: #eeeeee
+}
+
+.custom-footer ul {
+  margin-bottom: 0;
+  list-style: none;
+  margin-left: 0;
+}
+
+.custom-footer ul li {
+  margin-bottom: 0.2rem;
+}
+
+.custom-footer ul li:last-of-type {
+  margin-bottom: 0;
 }
 
 .divider {
@@ -22,58 +61,21 @@
   color: #2978a0;
 }
 
-.custom-footer .message {
-  position: relative;
-  left: 0;
-  width: 50%;
-  color: #ffffff;
-  display: inline-block;
-}
-
-.custom-footer .icon-group {
-  height: 100%;
-  position: relative;
-  right: 0;
-  width: 50%;
-  text-align: right;
-  display: inline-block;
-}
-
-.custom-footer .icon-group a {
-  display: inline-block;
-  margin-left: 1rem;
-  width: 2rem;
-  color: unset;
-}
-
-.custom-footer .icon-group a:first-of-type {
-  margin-left: -1rem;
-}
-
-.custom-footer .icon-group a img {
-  width: 2rem;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
 @media screen and (max-width: 460px) {
   .custom-footer {
     line-height: 61px;
   }
-  .custom-footer .message {
+  .custom-footer .links {
     margin: 0 auto;
     width: 100%;
     height: 50%;
-    text-align: center;
     left: 0;
     position: relative;
   }
-
-  .custom-footer .icon-group {
+  .custom-footer .message {
+    margin-top: 1rem;
+    position: relative;
+    line-height: 1.5;
     width: 100%;
-    height: 50%;
-    text-align: center;
   }
 }
