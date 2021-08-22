@@ -1,5 +1,5 @@
 .custom-footer {
-  background-color: #253031;
+  background-color: var(--altBg);
 }
 
 .custom-footer .container {
