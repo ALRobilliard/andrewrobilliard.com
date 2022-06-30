@@ -8,9 +8,10 @@ I'm Andrew Robilliard, a software developer working primarily within the Microso
 These days, I undertake the full software develivery lifecycle. Defining, developing, testing and maintaining software implementations for a wide range of clients and solutions.
 
 ## 👨‍💻 Employment
-
-- Intergen - **Jan. 2018 - Present**
-  - Senior Developer - **May 2021 - Present**
+- Capgemini
+  - Senior Developer - **July 2022 - Present**
+- Intergen - **Jan. 2018 - June 2021**
+  - Senior Developer - **May 2021 - June 2021**
   - Software Developer - **July 2019 - April 2021**
   - Associate Developer - **Feb. 2019 - June 2019**
   - Graduate Developer - **Jan. 2018 - Jan. 2019**
