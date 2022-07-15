@@ -10,8 +10,8 @@ These days, I undertake the full software develivery lifecycle. Defining, develo
 ## 👨‍💻 Employment
 - Capgemini - **July 2022 - Present**
   - Senior Developer - **July 2022 - Present**
-- Intergen - **Jan. 2018 - June 2021**
-  - Senior Developer - **May 2021 - June 2021**
+- Intergen - **Jan. 2018 - June 2022**
+  - Senior Developer - **May 2021 - June 2022**
   - Software Developer - **July 2019 - April 2021**
   - Associate Developer - **Feb. 2019 - June 2019**
   - Graduate Developer - **Jan. 2018 - Jan. 2019**
