@@ -49,7 +49,7 @@ const BioSml = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
+      <p style={{ margin: 'auto' }}>
         Written by <strong>{author.name}</strong> {author.summary}
         {` `}
         <a href={`https://twitter.com/${social.twitter}`} target="_blank">
