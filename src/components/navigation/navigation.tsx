@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { Link } from "gatsby"
 import "./navigation.css"
 import useWindowDimensions from "../window-dimensions"
@@ -52,22 +51,6 @@ const Navigation = () => {
                 <Link className="nav-link" to={`/contact`}>
                   Contact
                 </Link>
-              </li>
-              <li>
-                <ThemeToggler>
-                  {({ theme, toggleTheme }: any) => (
-                    <label
-                      onClick={e => toggleTheme(theme === 'dark' ? 'light' : 'dark')}
-                      style={{
-                        fontSize: '2rem',
-                        position: 'relative',
-                        top: '5px'
-                      }}
-                    >
-                      {theme === 'dark' ? '☾' : '☀'}
-                    </label>
-                  )}
-                </ThemeToggler>
               </li>
             </ul>
           </div>
