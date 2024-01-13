@@ -58,7 +58,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -66,7 +65,6 @@ module.exports = {
         trackingId: `UA-123355614-1`,
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -79,7 +77,6 @@ module.exports = {
         icon: `content/assets/icon.png`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -99,6 +96,7 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-dark-mode`
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`
   ],
 }

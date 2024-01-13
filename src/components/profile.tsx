@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { rhythm } from "../utils/typography"
 
 const Profile = () => {
@@ -8,9 +8,7 @@ const Profile = () => {
     query ProfileQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 200, height: 200) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       site {
@@ -29,8 +27,8 @@ const Profile = () => {
       }
     }
   `)
-  const { author, social } = data.site.siteMetadata
-
+  const { author } = data.site.siteMetadata
+  console.log(data.avatar);
   return (
     <div
       style={{
@@ -49,10 +47,12 @@ const Profile = () => {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <Image
-          fixed={data.avatar.childImageSharp.fixed}
+        <GatsbyImage
+          image={data.avatar.childImageSharp.gatsbyImageData}
           alt={author.name}
           style={{
+            height: `200px`,
+            width: `200px`,
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
             minWidth: 50,
