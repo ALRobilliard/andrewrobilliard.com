@@ -19,7 +19,7 @@ const BioSml = () => {
             summary
           }
           social {
-            twitter
+            bluesky
           }
         }
       }
@@ -52,8 +52,8 @@ const BioSml = () => {
       <p style={{ margin: 'auto' }}>
         Written by <strong>{author.name}</strong> {author.summary}
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`} target="_blank">
-          You should follow me on Twitter.
+        <a href={`https://bsky.app/profile/${social.bluesky}`} target="_blank">
+          You should follow me on Bluesky.
         </a>
       </p>
     </div>

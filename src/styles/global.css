@@ -1,6 +1,7 @@
 @import "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.8.2/devicon.min.css";
+
 body {
-  --bg: white;
+  --bg: #f0f0f0;
   --altBg: #253031;
   --textNormal: #222;
   --textTitle: #222;
@@ -14,7 +15,7 @@ body {
 body.dark {
   -webkit-font-smoothing: antialiased;
 
-  --bg: #253031;
+  --bg: #181818;
   --altBg: #3e5153;
   --textNormal: rgba(255, 255, 255, 0.88);
   --textTitle: white;
@@ -29,7 +30,8 @@ a {
 
 a:hover {
   opacity: 0.8;
-  -webkit-transition: opacity 0.2s; /* safari */
+  -webkit-transition: opacity 0.2s;
+  /* safari */
   transition: opacity 0.2s;
 }
 

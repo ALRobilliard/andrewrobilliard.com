@@ -23,7 +23,7 @@ const BlogIndex = ({ data }: Props) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" lang="en" />
       <Bio />
       {posts.map(({ node }: any) => {
         const title = node.frontmatter.title || node.fields.slug
