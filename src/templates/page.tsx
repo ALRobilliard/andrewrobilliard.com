@@ -26,6 +26,7 @@ const PageTemplate = ({ data, pageContext }: Props) => {
       <SEO
         title={page.frontmatter.title}
         description={page.frontmatter.description || page.excerpt}
+        lang="en"
       />
       <article>
         <h1

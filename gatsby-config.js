@@ -11,7 +11,7 @@ module.exports = {
       dev: `alrobilliard`,
       github: `alrobilliard`,
       linkedin: `andrew-robilliard`,
-      twitter: `alrobilliard`,
+      bluesky: `andrewrobilliard.com`,
     },
   },
   plugins: [
@@ -51,6 +51,10 @@ module.exports = {
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
+          },
+          {
+            resolve: 'gatsby-remark-auto-link-new-window',
+            options: {},
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,

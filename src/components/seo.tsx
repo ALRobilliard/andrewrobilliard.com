@@ -26,7 +26,7 @@ const SEO = ({ description, lang, meta, title }: Props) => {
             title
             description
             social {
-              twitter
+              bluesky
             }
           }
         }
@@ -61,7 +61,7 @@ const SEO = ({ description, lang, meta, title }: Props) => {
           content: `website`,
         },
         {
-          name: `twitter:card`,
+          name: `bluesky:card`,
           content: `summary`,
         },
         {
@@ -79,12 +79,6 @@ const SEO = ({ description, lang, meta, title }: Props) => {
       ].concat(meta || [])}
     />
   )
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
 }
 
 SEO.propTypes = {

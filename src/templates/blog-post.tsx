@@ -37,6 +37,7 @@ const BlogPostTemplate = ({ data, pageContext }: Props) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        lang="en"
       />
       <article>
         <header>
