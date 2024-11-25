@@ -1,6 +1,6 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLinkedin, faDev, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faDev, faGithub, faBluesky } from '@fortawesome/free-brands-svg-icons'
 import github from "../../../content/thumbnails/github.png"
 import envelope from "../../../content/thumbnails/envelope.png"
 import dev from "../../../content/thumbnails/dev.png"
@@ -40,12 +40,12 @@ const Footer = ({ message }: Props) => {
               </li>
               <li>
                 <a
-                  href="https://twitter.com/ALRobilliard"
-                  title="ALRobilliard on Twitter"
+                  href="https://bsky.app/profile/andrewrobilliard.com"
+                  title="andrewrobilliard.com on Bluesky"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <span><FontAwesomeIcon icon={faTwitter} /> alrobilliard</span>
+                  <span><FontAwesomeIcon icon={faBluesky} /> @andrewrobilliard.com</span>
                 </a>
               </li>
               <li>

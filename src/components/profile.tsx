@@ -21,7 +21,7 @@ const Profile = () => {
             dev
             github
             linkedin
-            twitter
+            bluesky
           }
         }
       }

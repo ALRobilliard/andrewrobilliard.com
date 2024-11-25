@@ -20,7 +20,7 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            bluesky
           }
         }
       }
@@ -51,8 +51,8 @@ const Bio = () => {
         <p>
           Sometimes, I tweet about my thoughts, my side-projects, or anything else that's on my mind.
           {` `}
-          <a href={`https://twitter.com/${social.twitter}`} target="_blank">
-            Maybe you should follow me on Twitter?
+          <a href={`https://bsky.app/profile/${social.bluesky}`} target="_blank">
+            Maybe you should follow me on Bluesky?
           </a>
         </p>
       </div>

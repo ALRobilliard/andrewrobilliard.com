@@ -11,7 +11,7 @@ module.exports = {
       dev: `alrobilliard`,
       github: `alrobilliard`,
       linkedin: `andrew-robilliard`,
-      twitter: `alrobilliard`,
+      bluesky: `andrewrobilliard.com`,
     },
   },
   plugins: [
